@@ -154,6 +154,14 @@ public class SplashScreenActivity extends AppCompatActivity {
                         ApiResources.RAVE_ENCRYPTION_KEY = configuration.getPaymentConfig().getReveEncryptionKey();
                         ApiResources.RAVE_PUBLIC_KEY = configuration.getPaymentConfig().getRevePublicKey();
                         ApiResources.EXCHSNGE_RATE = configuration.getPaymentConfig().getExchangeRate();
+
+                        ApiResources.statuspop=configuration.getApkUpdateInfo().getStatuspop();
+                        System.out.println("cek "+ApiResources.statuspop);
+                        ApiResources.apkpop=configuration.getApkUpdateInfo().getApkUrl();
+                        ApiResources.deskripsipop=configuration.getApkUpdateInfo().getPesan();
+                        ApiResources.judulpop=configuration.getApkUpdateInfo().getJudul();
+                        ApiResources.popimageurl=configuration.getApkUpdateInfo().getLogourl();
+
                         //save genre, country and tv category list to constants
                         Constants.genreList = configuration.getGenre();
                         Constants.countryList = configuration.getCountry();
@@ -164,8 +172,9 @@ public class SplashScreenActivity extends AppCompatActivity {
                         db.insertConfigurationData(configuration);
                         //apk update check
                         if (isNeedUpdate(configuration.getApkUpdateInfo().getVersionCode())) {
-                            showAppUpdateDialog(configuration.getApkUpdateInfo());
-                            return;
+                           Intent intent = new Intent(SplashScreenActivity.this,UpdateActivity.class);
+                           intent.putExtra("apk",configuration.getApkUpdateInfo().getApkUrl());
+                           startActivity(intent);
                         }
 
                         if (db.getConfigurationData() != null) {

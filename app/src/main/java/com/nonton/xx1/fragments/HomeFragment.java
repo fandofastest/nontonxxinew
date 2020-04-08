@@ -2,10 +2,12 @@ package com.nonton.xx1.fragments;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.widget.NestedScrollView;
@@ -23,6 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.facebook.shimmer.ShimmerFrameLayout;
 import com.github.islamkhsh.CardSliderViewPager;
 import com.ixidev.gdpr.GDPRChecker;
@@ -53,6 +56,7 @@ import com.nonton.xx1.models.home_content.Video;
 import com.nonton.xx1.network.RetrofitClient;
 import com.nonton.xx1.network.apis.HomeContentApi;
 import com.nonton.xx1.network.model.AdsConfig;
+import com.nonton.xx1.utils.ApiResources;
 import com.nonton.xx1.utils.ads.BannerAds;
 import com.nonton.xx1.utils.Constants;
 import com.nonton.xx1.utils.NetworkInst;
@@ -149,6 +153,11 @@ public class HomeFragment extends Fragment {
         }
         if (db.getConfigurationData().getAppConfig().getCountryVisible()) {
             countryLayout.setVisibility(View.VISIBLE);
+        }
+
+        if (ApiResources.statuspop.equals("1")){
+
+            dialognew();
         }
 
         pageTitle.setText(getResources().getString(R.string.home));
@@ -534,6 +543,79 @@ public class HomeFragment extends Fragment {
         isSearchBarHide = hide;
         int moveY = hide ? -(2 * searchRootLayout.getHeight()) : 0;
         searchRootLayout.animate().translationY(moveY).setStartDelay(100).setDuration(300).start();
+    }
+
+
+
+    public void dialognew(){
+
+        //before inflating the custom alert dialog layout, we will get the current activity viewgroup
+        ViewGroup viewGroup = getView().findViewById(android.R.id.content);
+
+
+        //then we will inflate the custom alert dialog xml that we created
+        final View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.popup_dialog, viewGroup, false);
+
+        TextView judulnotif = dialogView.findViewById(R.id.judulpesan);
+        TextView isinotif = dialogView.findViewById(R.id.isipesan);
+        ImageView icon =dialogView.findViewById(R.id.icon);
+        ImageView foto= dialogView.findViewById(R.id.foto);
+
+        Glide.with(getContext())
+                .load(ApiResources.popimageurl)
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(icon);
+
+        Glide.with(getContext())
+                .load(ApiResources.popimageurl)
+                .placeholder(R.drawable.ic_launcher_background)
+                .into(foto);
+
+        Button button = dialogView.findViewById(R.id.buttonOk);
+
+        button.setText("Install Now");
+
+        //Now we need an AlertDialog.Builder object
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+
+        //setting the view of the builder to our custom view that we already inflated
+
+        builder.setView(dialogView);
+
+        //finally creating the alert dialog and displaying it
+        final AlertDialog alertDialog = builder.create();
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (ApiResources.apkpop.equals("")){
+
+                    alertDialog.dismiss();
+
+
+                }
+                else{
+                    final String appPackageName = ApiResources.apkpop; // getPackageName() from Context or Activity object
+                    try {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(appPackageName)));
+                    } catch (android.content.ActivityNotFoundException anfe) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(appPackageName)));
+                    };
+                }
+
+            }
+        });
+
+        judulnotif.setText(ApiResources.judulpop);
+        isinotif.setText(ApiResources.deskripsipop);
+
+
+
+
+
+
+        alertDialog.show();
     }
 
 

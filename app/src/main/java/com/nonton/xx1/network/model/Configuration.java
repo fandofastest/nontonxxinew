@@ -30,6 +30,8 @@ public class Configuration {
     @Expose
     private ApkUpdateInfo apkUpdateInfo;
 
+
+
     public Configuration() {
     }
 

@@ -120,6 +120,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity
+            android:name="com.nonton.xx1.UpdateActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="fullSensor">
+
+        </activity>
         <activity
             android:name="com.nonton.xx1.ItemMovieActivity"
             android:label="@string/title_activity_item_show"
@@ -151,7 +159,7 @@
             android:theme="@style/AppTheme.Nobar" />
 
         <!-- StartApp activities integration -->
-       
+
     </application>
 
 </manifest>

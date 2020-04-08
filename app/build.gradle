@@ -92,7 +92,7 @@ dependencies {
     implementation 'jp.wasabeef:picasso-transformations:2.2.1'
     implementation 'com.android.volley:volley:1.1.1'
 
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     implementation 'jp.wasabeef:glide-transformations:4.0.0'
     // retrofit
@@ -140,4 +140,5 @@ dependencies {
     implementation 'com.facebook.android:facebook-login:5.15.3'
     //Facebook audiene network
     implementation 'com.facebook.android:audience-network-sdk:5.6.1'
+
 }

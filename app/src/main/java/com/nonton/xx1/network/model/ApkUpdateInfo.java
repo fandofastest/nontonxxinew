@@ -20,6 +20,53 @@ public class ApkUpdateInfo {
     @Expose
     private boolean isSkipable;
 
+    @SerializedName("popimageurl")
+    @Expose
+    private String logourl;
+
+    @SerializedName("deskripsipop")
+    @Expose
+    private String pesan;
+    @SerializedName("judulpop")
+    @Expose
+    private String judul;
+
+    @SerializedName("statuspop")
+    @Expose
+    private String statuspop;
+
+    public String getStatuspop() {
+        return statuspop;
+    }
+
+    public void setStatuspop(String statuspop) {
+        this.statuspop = statuspop;
+    }
+
+    public String getPesan() {
+        return pesan;
+    }
+
+    public void setPesan(String pesan) {
+        this.pesan = pesan;
+    }
+
+    public String getJudul() {
+        return judul;
+    }
+
+    public void setJudul(String judul) {
+        this.judul = judul;
+    }
+
+    public String getLogourl() {
+        return logourl;
+    }
+
+    public void setLogourl(String logourl) {
+        this.logourl = logourl;
+    }
+
     public String getVersionCode() {
         return versionCode;
     }

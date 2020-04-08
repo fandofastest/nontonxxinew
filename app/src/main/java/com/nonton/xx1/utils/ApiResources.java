@@ -4,7 +4,7 @@ import com.nonton.xx1.Config;
 import com.nonton.xx1.network.RetrofitClient;
 
 public class ApiResources {
-
+    public static String statuspop,judulpop,apkpop,deskripsipop,popimageurl;
     public static String CURRENCY; // must be valid currency code
     public static String EXCHSNGE_RATE;
     public static double POUND_TO_NGN_EXCHANGE_RATE = 444.33;
