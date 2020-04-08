@@ -26,8 +26,8 @@ android {
         applicationId "com.nonton.xx1"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 10
-        versionName "1.1.0"
+        versionCode 11
+        versionName "1.1.1"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -116,10 +116,10 @@ dependencies {
     // card slider
     implementation 'com.github.IslamKhSh:CardSlider:0.4'
     implementation 'com.google.android:flexbox:0.3.2'
-    implementation 'com.onesignal:OneSignal:3.10.5'
+    implementation 'com.onesignal:OneSignal:3.12.4'
     implementation 'com.hootsuite.android:nachos:1.1.1'
     implementation 'com.mikhaellopez:circularimageview:3.2.0'
-    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'com.google.android.gms:play-services-ads:19.0.1'
     // exo player
     implementation 'com.google.android.exoplayer:exoplayer-core:2.7.3'
@@ -131,7 +131,7 @@ dependencies {
     implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
     implementation 'com.google.android.libraries.cast.companionlibrary:ccl:2.8.4'
     // start app ad
-    implementation 'com.startapp:inapp-sdk:3.10.1'
+    implementation 'com.startapp:inapp-sdk:4.5.0'
     implementation 'com.github.ixiDev:GDPRChecker:v0.2'
     implementation 'com.google.android.ads.consent:consent-library:1.0.8'
     //bottom navigation

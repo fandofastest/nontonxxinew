@@ -24,6 +24,12 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import com.applovin.adview.AppLovinInterstitialAd;
+import com.applovin.adview.AppLovinInterstitialAdDialog;
+import com.applovin.sdk.AppLovinAd;
+import com.applovin.sdk.AppLovinAdDisplayListener;
+import com.applovin.sdk.AppLovinAdLoadListener;
+import com.applovin.sdk.AppLovinAdSize;
 import com.applovin.sdk.AppLovinPrivacySettings;
 import com.applovin.sdk.AppLovinSdk;
 import com.facebook.ads.Ad;
@@ -42,8 +48,12 @@ import com.nonton.xx1.utils.PreferenceUtils;
 import com.nonton.xx1.utils.ApiResources;
 import com.nonton.xx1.utils.Constants;
 import com.nonton.xx1.utils.ToastMsg;
-import com.startapp.android.publish.adsCommon.StartAppAd;
-import com.startapp.android.publish.adsCommon.StartAppSDK;
+import com.startapp.sdk.adsbase.AutoInterstitialPreferences;
+import com.startapp.sdk.adsbase.StartAppAd;
+import com.startapp.sdk.adsbase.StartAppSDK;
+import com.startapp.sdk.adsbase.adlisteners.AdDisplayListener;
+import com.startapp.sdk.adsbase.adlisteners.AdEventListener;
+
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -62,6 +72,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     private int SPLASH_TIME = 1500;
     private Runnable timer;
     private DatabaseHelper db;
+    AppLovinAd loadedAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -306,37 +317,87 @@ public class SplashScreenActivity extends AppCompatActivity {
             } else if (adsConfig.getMobileAdsNetwork().equalsIgnoreCase(Constants.NETWORK_AUDIENCE)) {
                 showFANInterstitialAds(SplashScreenActivity.this);
             }
-            else {
-                if (PreferenceUtils.isLoggedIn(SplashScreenActivity.this)) {
-                    Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
-                    finish();
-                } else {
 
-                    if (isLoginMandatory()) {
-                        Intent intent = new Intent(SplashScreenActivity.this, FirebaseSignUpActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intent);
-                        finish();
-                    } else {
 
-                        Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                        startActivity(intent);
-                        finish();
-                    }
+        }
+
+        else {
+            // Load an Interstitial Ad
+            AppLovinSdk.getInstance( this ).getAdService().loadNextAd( AppLovinAdSize.INTERSTITIAL, new AppLovinAdLoadListener()
+            {
+                @Override
+                public void adReceived(AppLovinAd ad)
+                {
+                    loadedAd = ad;
+                    System.out.println("fando loaded" );
                 }
 
+                @Override
+                public void failedToReceiveAd(int errorCode)
+                {
+                    showStartappInterstitialAds(SplashScreenActivity.this);
+                    // Look at AppLovinErrorCodes.java for list of error codes.
+                }
+            } );
 
+
+            AppLovinInterstitialAdDialog interstitialAd = AppLovinInterstitialAd.create( AppLovinSdk.getInstance( this ), this );
+            interstitialAd.showAndRender( loadedAd );
+            interstitialAd.show();
+            interstitialAd.setAdDisplayListener(new AppLovinAdDisplayListener() {
+                @Override
+                public void adDisplayed(AppLovinAd ad) {
+
+                }
+
+                @Override
+                public void adHidden(AppLovinAd ad) {
+                    pindahhome();
+
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+    }
+
+    public void pindahhome (){
+        if (PreferenceUtils.isLoggedIn(SplashScreenActivity.this)) {
+            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            startActivity(intent);
+            finish();
+        } else {
+
+            if (isLoginMandatory()) {
+                Intent intent = new Intent(SplashScreenActivity.this, FirebaseSignUpActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                finish();
+            } else {
+
+                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                finish();
             }
-
         }
 
     }
@@ -400,6 +461,12 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(int i) {
                 super.onAdFailedToLoad(i);
+
+
+
+
+
+
 
                 if (PreferenceUtils.isLoggedIn(SplashScreenActivity.this)) {
                     Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
@@ -536,38 +603,80 @@ public class SplashScreenActivity extends AppCompatActivity {
     public void showStartappInterstitialAds(Context context) {
         //startapp
         StartAppSDK.init(context, new DatabaseHelper(context).getConfigurationData().getAdsConfig().getStartappAppId(), true);
+        StartAppSDK.setUserConsent (context,
+                "pas",
+                System.currentTimeMillis(),
+                true);
+        StartAppAd.setAutoInterstitialPreferences(
+                new AutoInterstitialPreferences()
+                        .setSecondsBetweenAds(300)
+        );
 
         StartAppAd startAppAd = new StartAppAd(context);
+        startAppAd.loadAd(new AdEventListener() {
+            @Override
+            public void onReceiveAd(com.startapp.sdk.adsbase.Ad ad) {
+                startAppAd.showAd(new AdDisplayListener() {
+                    @Override
+                    public void adHidden(com.startapp.sdk.adsbase.Ad ad) {
+                        pindahhome();
+                    }
 
-        startAppAd.showAd(); // show the ad
+                    @Override
+                    public void adDisplayed(com.startapp.sdk.adsbase.Ad ad) {
 
+                    }
 
-        if (PreferenceUtils.isLoggedIn(SplashScreenActivity.this)) {
-            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
-            finish();
-        } else {
+                    @Override
+                    public void adClicked(com.startapp.sdk.adsbase.Ad ad) {
 
-            if (isLoginMandatory()) {
-                Intent intent = new Intent(SplashScreenActivity.this, FirebaseSignUpActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(intent);
-                finish();
-            } else {
+                    }
 
-                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                startActivity(intent);
-                finish();
+                    @Override
+                    public void adNotDisplayed(com.startapp.sdk.adsbase.Ad ad) {
+                        pindahhome();
+
+                    }
+                }); // show the ad
             }
-        }
+
+            @Override
+            public void onFailedToReceiveAd(com.startapp.sdk.adsbase.Ad ad) {
+            pindahhome();
+            }
+        });
+
+
+
+
+
+
+//        if (PreferenceUtils.isLoggedIn(SplashScreenActivity.this)) {
+//            Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//            startActivity(intent);
+//            finish();
+//        } else {
+//
+//            if (isLoginMandatory()) {
+//                Intent intent = new Intent(SplashScreenActivity.this, FirebaseSignUpActivity.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//                startActivity(intent);
+//                finish();
+//            } else {
+//
+//                Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//                startActivity(intent);
+//                finish();
+//            }
+//        }
 
 
     }

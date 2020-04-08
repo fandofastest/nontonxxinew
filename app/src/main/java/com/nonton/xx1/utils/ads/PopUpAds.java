@@ -10,8 +10,9 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.nonton.xx1.database.DatabaseHelper;
 import com.nonton.xx1.network.model.AdsConfig;
-import com.startapp.android.publish.adsCommon.StartAppAd;
-import com.startapp.android.publish.adsCommon.StartAppSDK;
+import com.startapp.sdk.adsbase.StartAppAd;
+import com.startapp.sdk.adsbase.StartAppSDK;
+
 
 public class PopUpAds {
 
@@ -94,7 +95,6 @@ public class PopUpAds {
     public static void showStartappInterstitialAds(Context context){
         //startapp
         StartAppSDK.init(context, new DatabaseHelper(context).getConfigurationData().getAdsConfig().getStartappAppId(), true);
-
         StartAppAd startAppAd = new StartAppAd(context);
         startAppAd.showAd(); // show the ad
     }

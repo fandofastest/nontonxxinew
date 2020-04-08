@@ -13,8 +13,8 @@ import com.google.android.gms.ads.AdView;
 import com.ixidev.gdpr.GDPRChecker;
 import com.nonton.xx1.database.DatabaseHelper;
 import com.nonton.xx1.network.model.AdsConfig;
-import com.startapp.android.publish.ads.banner.Banner;
-import com.startapp.android.publish.adsCommon.StartAppSDK;
+import com.startapp.sdk.ads.banner.Banner;
+import com.startapp.sdk.adsbase.StartAppSDK;
 
 
 public class BannerAds {

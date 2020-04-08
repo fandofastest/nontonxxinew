@@ -59,8 +59,9 @@ import com.nonton.xx1.utils.PreferenceUtils;
 import com.nonton.xx1.utils.Constants;
 import com.nonton.xx1.utils.SpacingItemDecoration;
 import com.nonton.xx1.utils.Tools;
-import com.startapp.android.publish.adsCommon.StartAppAd;
-import com.startapp.android.publish.adsCommon.StartAppSDK;
+import com.startapp.sdk.adsbase.StartAppAd;
+import com.startapp.sdk.adsbase.StartAppSDK;
+
 
 import java.io.File;
 import java.io.Serializable;
@@ -114,7 +115,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         castContext.getCastState();
 
         StartAppSDK.init(this, new DatabaseHelper(MainActivity.this).getConfigurationData().getAdsConfig().getStartappAppId(), false);
-        StartAppAd.disableSplash();
 
         navMenuStyle = db.getConfigurationData().getAppConfig().getMenu();
 
