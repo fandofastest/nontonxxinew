@@ -23,16 +23,16 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "com.nonton.xx1"
+        applicationId "com.nontonxxi.app"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 11
-        versionName "1.1.1"
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         manifestPlaceholders = [
-                onesignal_app_id               : '5b1fc3dd-d988-4250-90b5-015687a3b0f7',
+                onesignal_app_id               : 'b907428e-61dc-417b-9534-8ecb6b4af0e8',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]
@@ -140,5 +140,8 @@ dependencies {
     implementation 'com.facebook.android:facebook-login:5.15.3'
     //Facebook audiene network
     implementation 'com.facebook.android:audience-network-sdk:5.6.1'
+    implementation 'com.github.f0ris.sweetalert:library:1.6.2'
+
+
 
 }

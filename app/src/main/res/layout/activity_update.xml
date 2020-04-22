@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/colorPrimary"
     android:layout_height="match_parent"
-    tools:context="com.nonton.xx1.UpdateActivity">
+    tools:context="com.nontonxxi.app.UpdateActivity">
 
     <ImageView
         android:id="@+id/foto"

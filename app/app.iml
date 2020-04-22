@@ -179,7 +179,7 @@
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-auth:19.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-auth:17.0.0@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.facebook.android:audience-network-sdk:5.6.1@aar" level="project" />
-    <orderEntry type="library" name="Gradle: com.applovin:applovin-sdk:9.12.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.applovin:applovin-sdk:9.12.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-core:17.2.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.firebase:firebase-analytics:17.2.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.google.android.gms:play-services-measurement:17.2.3@aar" level="project" />
@@ -290,5 +290,7 @@
     <orderEntry type="library" name="Gradle: com.github.ixiDev:GDPRChecker:v0.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.volsahin:bottomify-navigation-view:1.0.2@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.installreferrer:installreferrer:1.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.f0ris.sweetalert:library:1.6.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.pnikosis:materialish-progress:1.7@aar" level="project" />
   </component>
 </module>
