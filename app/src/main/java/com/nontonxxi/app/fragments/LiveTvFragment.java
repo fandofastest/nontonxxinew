@@ -312,6 +312,7 @@ public class LiveTvFragment extends Fragment {
 
                     }
                 })
+
                 .show();
     }
 

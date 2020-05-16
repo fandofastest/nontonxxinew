@@ -3,13 +3,13 @@ package com.nontonxxi.app;
 public class Config {
 
     // copy your api url from php admin dashboard & paste below
-    public static final String API_SERVER_URL = "https://new.pekanbarumedia.online/v2/new_api/";
+    public static final String API_SERVER_URL = "https://app.serbuk.xyz/new_api/";
 
     //copy your api key from php admin dashboard & paste below
     public static final String API_KEY = "bcdpunramiuuxheasg12ev0z";
 
     //copy your terms url from php admin dashboard & paste below
-    public static final String TERMS_URL = "https://new.pekanbarumedia.online/v2/terms/";
+    public static final String TERMS_URL = "https://app.serbuk.xyz/terms/";
 
     //youtube video auto play
     public static boolean YOUTUBE_VIDEO_AUTO_PLAY = true;
