@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.Jay-Goo:RangeSeekBar:v3.0.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a757af114e78af079905806d5a803bb/jetified-RangeSeekBar-v3.0.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e36c64221f750182501e207fcbb3fd7a/jetified-RangeSeekBar-v3.0.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a757af114e78af079905806d5a803bb/jetified-RangeSeekBar-v3.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2a757af114e78af079905806d5a803bb/jetified-RangeSeekBar-v3.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e36c64221f750182501e207fcbb3fd7a/jetified-RangeSeekBar-v3.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e36c64221f750182501e207fcbb3fd7a/jetified-RangeSeekBar-v3.0.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.Jay-Goo/RangeSeekBar/v3.0.0/f40b6811349bf282dd034309a8b8b231010b7db8/RangeSeekBar-v3.0.0-javadoc.jar!/" />

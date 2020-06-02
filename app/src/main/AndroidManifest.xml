@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.nontonxxi.app"
+    package="com.xxi.nonton"
     tools:ignore="MissingLeanbackLauncher">
 
 
@@ -23,7 +23,7 @@
 
 
     <application
-        android:name="com.nontonxxi.app.utils.MyAppClass"
+        android:name="com.xxi.nonton.utils.MyAppClass"
         android:allowBackup="true"
         tools:replace="android:icon"
         android:icon="@mipmap/ic_launcher"
@@ -34,24 +34,24 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="com.nontonxxi.app.SearchActivity" />
-        <activity android:name="com.nontonxxi.app.FirebaseSignUpActivity" />
-        <activity android:name="com.nontonxxi.app.EventPaymentStripeActivity" />
+        <activity android:name="com.xxi.nonton.SearchActivity" />
+        <activity android:name="com.xxi.nonton.FirebaseSignUpActivity" />
+        <activity android:name="com.xxi.nonton.EventPaymentStripeActivity" />
 
         <activity
-            android:name="com.nontonxxi.app.TestActivity"
+            android:name="com.xxi.nonton.TestActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.SearchFilterActivity"
+            android:name="com.xxi.nonton.SearchFilterActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.PapalPaymentActivity"
+            android:name="com.xxi.nonton.PapalPaymentActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.WebViewActivity"
+            android:name="com.xxi.nonton.WebViewActivity"
             android:screenOrientation="fullSensor" />
 
         <meta-data
@@ -70,49 +70,49 @@
             android:value="ARrHo4SIPy7zHFKkFMtA8ol_k7XAnaMTFnAU9P8WsTwK2Rr-P9A-vOwmwiTEgXdZnbyWXBzdQdo6kqRkwSuWVH"/>
 
         <activity
-            android:name="com.nontonxxi.app.TermsActivity"
+            android:name="com.xxi.nonton.TermsActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.ReplyActivity"
+            android:name="com.xxi.nonton.ReplyActivity"
             android:label="@string/title_activity_reply"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.nontonxxi.app.ProfileActivity"
+            android:name="com.xxi.nonton.ProfileActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.PassResetActivity"
+            android:name="com.xxi.nonton.PassResetActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.SearchResultActivity"
+            android:name="com.xxi.nonton.SearchResultActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.SignUpActivity"
+            android:name="com.xxi.nonton.SignUpActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.LoginActivity"
+            android:name="com.xxi.nonton.LoginActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.DetailsActivity"
+            android:name="com.xxi.nonton.DetailsActivity"
             android:configChanges="screenLayout|screenSize|orientation"
             android:label="@string/title_activity_details"
             android:theme="@style/AppTheme.NoActionBar" /> <!-- android:configChanges="screenLayout|screenSize|orientation" -->
         <activity
-            android:name="com.nontonxxi.app.MainActivity"
+            android:name="com.xxi.nonton.MainActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.nontonxxi.app.SettingsActivity"
+            android:name="com.xxi.nonton.SettingsActivity"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.SplashScreenActivity"
+            android:name="com.xxi.nonton.SplashScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="fullSensor">
             <intent-filter>
@@ -124,38 +124,38 @@
 
 
         <activity
-            android:name="com.nontonxxi.app.UpdateActivity"
+            android:name="com.xxi.nonton.UpdateActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="fullSensor">
 
         </activity>
         <activity
-            android:name="com.nontonxxi.app.ItemMovieActivity"
+            android:name="com.xxi.nonton.ItemMovieActivity"
             android:label="@string/title_activity_item_show"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.nontonxxi.app.ItemTVActivity"
+            android:name="com.xxi.nonton.ItemTVActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.ItemSeriesActivity"
+            android:name="com.xxi.nonton.ItemSeriesActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.SubscriptionActivity"
+            android:name="com.xxi.nonton.SubscriptionActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.StripePaymentActivity"
+            android:name="com.xxi.nonton.StripePaymentActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.PurchasePlanActivity"
+            android:name="com.xxi.nonton.PurchasePlanActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.nontonxxi.app.DownloadActivity"
+            android:name="com.xxi.nonton.DownloadActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
 

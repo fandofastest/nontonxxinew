@@ -23,16 +23,16 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "com.nontonxxi.app"
+        applicationId "com.xxi.nonton"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 2
-        versionName "1.1"
+        versionCode 1
+        versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         manifestPlaceholders = [
-                onesignal_app_id               : 'b907428e-61dc-417b-9534-8ecb6b4af0e8',
+                onesignal_app_id               : 'b543539b-247b-4784-aa9c-5997a21b6efa',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]

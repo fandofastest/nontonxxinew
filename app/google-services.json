@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "714312749126",
-    "firebase_url": "https://newnntnxxi.firebaseio.com",
-    "project_id": "newnntnxxi",
-    "storage_bucket": "newnntnxxi.appspot.com"
+    "project_number": "53908403434",
+    "firebase_url": "https://xxinonton.firebaseio.com",
+    "project_id": "xxinonton",
+    "storage_bucket": "xxinonton.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:714312749126:android:fc09996aa47729f4913a47",
+        "mobilesdk_app_id": "1:53908403434:android:57c3bce9bde6b696a9d393",
         "android_client_info": {
-          "package_name": "com.nontonxxi.app"
+          "package_name": "com.xxi.nonton"
         }
       },
       "oauth_client": [
         {
-          "client_id": "714312749126-ldsr8r1vj0r1nndiffb81pcb9pcr08mn.apps.googleusercontent.com",
+          "client_id": "53908403434-874hn6dh6jhetmkr1jqqpffjkn41di97.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDXaA7XxaozQ-aEHIafjlukk2Puw_BOSus"
+          "current_key": "AIzaSyC5m4KLQAParVJA04aqo0s9UTIaB9ylbtw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "714312749126-ldsr8r1vj0r1nndiffb81pcb9pcr08mn.apps.googleusercontent.com",
+              "client_id": "53908403434-874hn6dh6jhetmkr1jqqpffjkn41di97.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
