@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.xxi.nonton"
+    package="com.watchxxi.freemovies"
     tools:ignore="MissingLeanbackLauncher">
 
 
@@ -23,7 +23,7 @@
 
 
     <application
-        android:name="com.xxi.nonton.utils.MyAppClass"
+        android:name="com.watchxxi.freemovies.utils.MyAppClass"
         android:allowBackup="true"
         tools:replace="android:icon"
         android:icon="@mipmap/ic_launcher"
@@ -34,24 +34,24 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="com.xxi.nonton.SearchActivity" />
-        <activity android:name="com.xxi.nonton.FirebaseSignUpActivity" />
-        <activity android:name="com.xxi.nonton.EventPaymentStripeActivity" />
+        <activity android:name="com.watchxxi.freemovies.SearchActivity" />
+        <activity android:name="com.watchxxi.freemovies.FirebaseSignUpActivity" />
+        <activity android:name="com.watchxxi.freemovies.EventPaymentStripeActivity" />
 
         <activity
-            android:name="com.xxi.nonton.TestActivity"
+            android:name="com.watchxxi.freemovies.TestActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.SearchFilterActivity"
+            android:name="com.watchxxi.freemovies.SearchFilterActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.PapalPaymentActivity"
+            android:name="com.watchxxi.freemovies.PapalPaymentActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.WebViewActivity"
+            android:name="com.watchxxi.freemovies.WebViewActivity"
             android:screenOrientation="fullSensor" />
 
         <meta-data
@@ -70,49 +70,49 @@
             android:value="ARrHo4SIPy7zHFKkFMtA8ol_k7XAnaMTFnAU9P8WsTwK2Rr-P9A-vOwmwiTEgXdZnbyWXBzdQdo6kqRkwSuWVH"/>
 
         <activity
-            android:name="com.xxi.nonton.TermsActivity"
+            android:name="com.watchxxi.freemovies.TermsActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.ReplyActivity"
+            android:name="com.watchxxi.freemovies.ReplyActivity"
             android:label="@string/title_activity_reply"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.xxi.nonton.ProfileActivity"
+            android:name="com.watchxxi.freemovies.ProfileActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.PassResetActivity"
+            android:name="com.watchxxi.freemovies.PassResetActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.SearchResultActivity"
+            android:name="com.watchxxi.freemovies.SearchResultActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.SignUpActivity"
+            android:name="com.watchxxi.freemovies.SignUpActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.LoginActivity"
+            android:name="com.watchxxi.freemovies.LoginActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.DetailsActivity"
+            android:name="com.watchxxi.freemovies.DetailsActivity"
             android:configChanges="screenLayout|screenSize|orientation"
             android:label="@string/title_activity_details"
             android:theme="@style/AppTheme.NoActionBar" /> <!-- android:configChanges="screenLayout|screenSize|orientation" -->
         <activity
-            android:name="com.xxi.nonton.MainActivity"
+            android:name="com.watchxxi.freemovies.MainActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name="com.xxi.nonton.SettingsActivity"
+            android:name="com.watchxxi.freemovies.SettingsActivity"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.SplashScreenActivity"
+            android:name="com.watchxxi.freemovies.SplashScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="fullSensor">
             <intent-filter>
@@ -124,38 +124,38 @@
 
 
         <activity
-            android:name="com.xxi.nonton.UpdateActivity"
+            android:name="com.watchxxi.freemovies.UpdateActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="fullSensor">
 
         </activity>
         <activity
-            android:name="com.xxi.nonton.ItemMovieActivity"
+            android:name="com.watchxxi.freemovies.ItemMovieActivity"
             android:label="@string/title_activity_item_show"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.xxi.nonton.ItemTVActivity"
+            android:name="com.watchxxi.freemovies.ItemTVActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.ItemSeriesActivity"
+            android:name="com.watchxxi.freemovies.ItemSeriesActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.SubscriptionActivity"
+            android:name="com.watchxxi.freemovies.SubscriptionActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.StripePaymentActivity"
+            android:name="com.watchxxi.freemovies.StripePaymentActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.PurchasePlanActivity"
+            android:name="com.watchxxi.freemovies.PurchasePlanActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
         <activity
-            android:name="com.xxi.nonton.DownloadActivity"
+            android:name="com.watchxxi.freemovies.DownloadActivity"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Nobar" />
 

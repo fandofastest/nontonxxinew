@@ -15,6 +15,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 android {
 
+
+
     // this is for signed apk generate problem for lint
     /*lintOptions {
         checkReleaseBuilds false
@@ -23,7 +25,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "com.xxi.nonton"
+        applicationId "com.watchxxi.freemovies"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
@@ -32,7 +34,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         manifestPlaceholders = [
-                onesignal_app_id               : 'b543539b-247b-4784-aa9c-5997a21b6efa',
+                onesignal_app_id               : '62980850-4860-44fc-94aa-3dd514245b1f',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]

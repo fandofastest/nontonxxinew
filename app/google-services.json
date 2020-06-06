@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "53908403434",
-    "firebase_url": "https://xxinonton.firebaseio.com",
-    "project_id": "xxinonton",
-    "storage_bucket": "xxinonton.appspot.com"
+    "project_number": "101361884562",
+    "firebase_url": "https://watchxxi.firebaseio.com",
+    "project_id": "watchxxi",
+    "storage_bucket": "watchxxi.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:53908403434:android:57c3bce9bde6b696a9d393",
+        "mobilesdk_app_id": "1:101361884562:android:4a532061084dce7ea7354b",
         "android_client_info": {
-          "package_name": "com.xxi.nonton"
+          "package_name": "com.watchxxi.freemovies"
         }
       },
       "oauth_client": [
         {
-          "client_id": "53908403434-874hn6dh6jhetmkr1jqqpffjkn41di97.apps.googleusercontent.com",
+          "client_id": "101361884562-3gkslkgadps1ffa1jcfog65ka1vgjl2q.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC5m4KLQAParVJA04aqo0s9UTIaB9ylbtw"
+          "current_key": "AIzaSyD69krE9QCQaKIv3D8rEffeGOby7AI18Vo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "53908403434-874hn6dh6jhetmkr1jqqpffjkn41di97.apps.googleusercontent.com",
+              "client_id": "101361884562-3gkslkgadps1ffa1jcfog65ka1vgjl2q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
